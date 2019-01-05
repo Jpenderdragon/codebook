@@ -7,6 +7,7 @@ function preload() {
   this.load.image('bad',  './assets/Slime.png')
   this.load.image('pf',  './assets/platform.png')
   this.load.image('coin',  './assets/Coin.png')
+  this.load.image('over',  './assets/gameover.png')
   this.load.spritesheet('hero','./assets/hero.png',
    {frameWidth: 14, frameHeight: 19}
   )
@@ -57,7 +58,7 @@ function create()  {
  
   function hitbad(pl,bad) {
     bad.destroy()
-    this.add.image(0,0, 'over').setOrigin(0,0)
+    this.add.image(221,72, 'over').setOrigin(0,0).setScale(9,9)
     over = true
   }
  
